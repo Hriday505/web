@@ -1,5 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
+@charset "utf-8";
+/* CSS Document */
 
 *{margin: 0;
 padding: 0;
@@ -33,8 +35,8 @@ header{
 	justify-content: space-between;}
 header .logo{
  	font-size: 2rem;
+	margin-left:-2.3rem;
 	padding:.5rem .8rem;
-	border: 1px solid black;
     color:black;
 	font-weight:bolder;}
 header .nav-bar a{
@@ -60,7 +62,8 @@ header .nav-bar a:hover::after{
 
 header .icons {
 	font-size: 2rem;
-	margin-left: 1.5rem;
+	cursor: pointer;
+	margin-left:2.5rem;
 	color: black;}
 
 header .icons .active1:hover{
@@ -92,8 +95,8 @@ header .seach .search{
 	border: none;
 	outline: none;
 	width: 100%;
-	padding:2rem 1rem 3rem;
-}
+	padding:2rem 1rem 3rem;}
+
 
 
 #menu-bar{
@@ -117,12 +120,14 @@ position: relative;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
+	cursor: pointer;
 	gap:1.5rem;
 	padding-top:9rem 9%;}
 .home .slide-container .slide .content{
+	cursor: pointer;
 	animation: slide .5s linear 1s backwards;
 	flex:  1 1 40rem;
-	margin-left: 10rem;}
+	margin-left: 10.8rem;}
 	
 @keyframes slide{
 	0%{
@@ -132,13 +137,13 @@ position: relative;
 }
 .home .slide-container .slide .imge{
 	flex: 1 1 50rem;
-	margin-right: -5rem;
+	margin-right: -2rem;
 	margin-top:16rem;
 	position: relative;
 	z-index: 0;}
 .home .slide-container .slide .imge .nike{
 	animation: shoe .3s linear;
-	width: 70%;
+	width:65%;
 	transform: rotate(-3deg);}
 
 @keyframes shoe{
@@ -191,6 +196,8 @@ position: relative;
 .home #prev,.home #next{
 	position: absolute;
 	top: 50%;
+	margin-top:2.6rem;
+	cursor: pointer;
 	transform: translateY(-50%);
 	z-index: 100;
 	height: 5rem;
@@ -214,13 +221,15 @@ position: relative;
 }
 
 .home #next{
-	right: 3rem;
+	margin-top:2.8rem;
+	right:1.5rem;
 }
 
 /*==========end home=======*/
 
 
 .product .box-container{
+	cursor: pointer;
 display: flex;
 	margin-top:1.8rem;
 	flex-wrap: wrap;
@@ -257,6 +266,7 @@ display: flex;
 width: 5rem;
 	line-height: 4.5rem;
 	font-size: 2rem;
+	cursor: pointer;
 	margin-left: 0.8rem;
 	color: #000;
 	border: .1rem solid black;
@@ -330,6 +340,7 @@ color: orange;
 	display: flex;
 	padding-bottom: 3rem;
 	padding-left:2rem;
+	width:100%;
 	padding-top: 3rem;
 	flex-wrap: wrap;
 	border: 1px solid black;
@@ -339,6 +350,9 @@ color: orange;
 	align-items: center;
 	margin: 1.5rem  0;}
 .featured .row .content{
+	cursor: pointer;
+	margin-left:63rem;
+	margin-top: -55rem;
 	flex: 1 1 40rem;}
 .featured .row .image-container{
 	display: flex;
@@ -350,15 +364,17 @@ color: orange;
 }
 .featured .row .image-container .big-img{
 	padding: 1rem;
-	width: 80%;
+	width: 70%;
 }
 .featured .row .image-container .small-img img{
+	cursor: pointer;
 	border-radius:0.8rem;
 padding: .1rem;
 	border: 1px solid black;
 	width:100%
 }
 .featured .row .image-container .big-img img{
+	cursor: pointer;
 	filter:drop-shadow(0.5rem 0.4rem 0.3rem rgba(0,0,0,0.1));
 	width: 50%;
 }
@@ -374,13 +390,18 @@ transform: scale(1.05);
 
 .featured .row .content .stars{
 	font-size: 1.7rem;
+	margin-top:-2.5rem;
 	color:orange;
 	padding: 5rem 0;}
 
 .featured .row .content p{
+		margin-top:-2.8rem;
 	font-size: 1.5rem;
 	color: #666;
 	padding: 1rem 0;}
+.featured .row .content .btn{
+	margin-left:-0.4rem; 
+}
 
 .featured .row .content .price{
 	font-size: 2.5rem;
@@ -459,6 +480,7 @@ transform: scale(1.2);
 	width: 100%;
 	font-size: 1.7rem;
 	color: #333;
+	height:3.9rem;
 	padding: 1rem;
 	border: .2rem solid black;
 	border-right:none;
@@ -466,6 +488,7 @@ transform: scale(1.2);
 
 
 .news .content  form .btn{
+	margin-left:-1rem;
 	border-radius: none;}
 	
  .credit  .box{
@@ -480,54 +503,75 @@ transform: scale(1.2);
 /*==================responsive*/
 
 @media(max-width:991px){
-	.featured .row .content{
-	margin-left:45.6rem;
-	margin-top:-23rem;
+.featured .row{
+	display: flex;
+	padding-bottom: 3rem;
+	padding-left:2rem;
+	padding-top: 3rem;
+	flex-wrap: wrap;
+	border: 1px solid black;
+	gap:.1rem solid rgba(0,0,0,.1);
+	border-radius: .5rem;
+	background:#f9f9f9;
+	align-items: center;
+	margin: 1.5rem  0;}
+.featured .row .content{
+	display:flex;
+	flex-flow: column;
+	margin-left:43rem;
+	padding-right:6rem;
+	margin-top: -30rem;
 	flex: 1 1 40rem;}
-	
-	
+	.featured .row .content .btn{
+		display: flex;
+		width:50%;
+		height:3.8rem;
+		margin: 1.8rem;
+	margin-top: 1rem;
+	border-radius: .5rem;
+	border:.2rem solid #000;
+	font-size: 1.4rem;
+	font-weight:bolder;
+	background: white;
+	cursor: pointer;
+		padding: .8rem 1.9rem;}
+		
+	.row .content .btn:hover{
+		color: white;
+		background: orange;
+	}
 	
 .featured .row .content h3{
-	margin-top:-3rem;
-	font-size: 2.1rem;
+	font-size: 2rem;
 	color: #000;}
 
 .featured .row .content .stars{
-	font-size: 1.2rem;
-	margin-top:-3rem;
+	font-size: 1.7rem;
+	margin-top:-2.8rem;
 	color:orange;
 	padding: 5rem 0;}
 
 .featured .row .content p{
-	margin-top:-3rem;
+		margin-top:-3rem;
 	font-size: 1rem;
-	text-align-last: left;
 	color: #666;
 	padding: 1rem 0;}
-
-.featured .row .content .price{
-	font-size: 2.1rem;
-	color:#000;
-	font-weight: bolder;}
-.featured .row .content span{
-	font-size: 1.5rem;
-	color:#F84145;
-	text-decoration: line-through;}
-	
-	.featured .row .btn{
-		margin-left:-0.5rem;
-		font-size:1rem;
-		height:3rem;
-		
-	}
-	
-	
-	
+.featured .row .content .btn{
+	margin-left:-0.4rem; 
 }
 
+.featured .row .content .price{
+	font-size: 2.5rem;
+	color:#000;
+	font-weight: bolder;}
+
+	
+}
+/*==============tab===========*/
 @media (max-width:768px){
 	
 	#menu-bar{
+		margin-left:-2.2em;
 		display: block;}
 		
 	.nav-bar{
@@ -545,125 +589,227 @@ background:#CAC5C5;
 		border-radius: .5rem;
 		margin: 1rem;
 		display: block;
-		text-align: center;
-	}
+		text-align: center;}
+	
 	
 header .nav-bar.active{
 		left: 0;
 	}
 	
+	
+	.featured .big-img{
+		margin-left: -1.5rem;
+	}
 .featured .row .content{
-	margin-left:33.6rem;
-	margin-top:-23rem;
+	display:flex;
+	flex-flow: column;
+	margin-left:31rem;
+	margin-top:-40rem;
 	flex: 1 1 40rem;}
-	
-	
+
+	.home .slide-container .slide{
+		display: flex;
+		flex-flow: column;
+		margin-top:16rem;
+		margin-left:-3.5rem;}
+	.home .slide-container .imge{
+		display: flex;
+		justify-content: center;}
 	
 .featured .row .content h3{
-	margin-top:-3rem;
-	font-size: 2.1rem;
+	margin-top:15rem;
+	font-size: 1.5rem;
 	color: #000;}
 
 .featured .row .content .stars{
 	font-size: 1.2rem;
-	margin-top:-3rem;
-	color:orange;
-	padding: 5rem 0;}
-
-.featured .row .content p{
-	margin-top:-3rem;
-	font-size: 1rem;
-	text-align-last: left;
-	color: #666;
-	padding: 1rem 0;}
-
-.featured .row .content .price{
-	font-size: 2.1rem;
-	color:#000;
-	font-weight: bolder;}
-.featured .row .content span{
-	font-size: 1.5rem;
-	color:#F84145;
-	text-decoration: line-through;}
-	
-	.featured .row .btn{
-		margin-left:-0.5rem;
-		font-size:1rem;
-		height:3rem;
-		
-	}
-}
-
-
-@media (max-width:480px){
-	
-	
-	.featured .row{
-	display: flex;
-		width: 100%;
-	padding-bottom: 3rem;
-	padding-left:2rem;
-	padding-top: 3rem;
-	flex-wrap: wrap;
-	border: 1px solid black;
-	gap:.1rem solid rgba(0,0,0,.1);
-	border-radius: .5rem;
-	background:#f9f9f9;
-	align-items: center;
-	margin: 1.5rem  0;}
-	
-	
-	.featured .row .content{
-		object-fit: contain;
-	margin-left:21.6rem;
-	margin-top:-14rem;
-	flex: 1 1 40rem;}
-	
-	
-	
-.featured .row .content h3{
-	margin-top:-1rem;
-	font-size:1rem;
-	color: #000;}
-
-.featured .row .content .stars{
-	font-size: 1rem;
-	margin-top:-3rem;
+	margin-top:-3.5rem;
 	color:orange;
 	padding: 5rem 0;}
 
 .featured .row .content p{
 	margin-top:-5rem;
-	font-size:0.8rem;
+	font-size: 1rem;
 	text-align-last: left;
 	color: #666;
 	padding: 1rem 0;}
 
 .featured .row .content .price{
-	font-size:1.3rem;
+	font-size: 1.7rem;
 	color:#000;
 	font-weight: bolder;}
+	
+
 .featured .row .content span{
 	font-size: 1.5rem;
 	color:#F84145;
 	text-decoration: line-through;}
 	
-	.featured .row .btn{
-		margin-left:-0.5rem;
+		.featured .row .content .btn{
+		display: flex;
 		width:50%;
-		text-align: center;
-	padding: 1rem 1rem 0.6rem;
-		line-height:0.5px;
-		font-size:0.7rem;
-		height:2rem;
-
+		height:3.1rem;
+		margin: 1.8rem;
+	margin-top: 1rem;
+	border-radius: .5rem;
+	border:.2rem solid #000;
+	font-size:1.1rem;
+	font-weight:bolder;
+	background: white;
+	cursor: pointer;
+		padding: .7rem 2.3rem;}
+	.featured .row .content .btn:hover{
+		color: white;
+		background:orange}
+	.featured .row .content .btn{
+		margin-left:-0.4rem;} 
 	}
 
+/*==============tab===========*/
+
+@media (max-width:480px){
 	
+
+#menu-bar{
+		margin-left:-2.3rem;
+		display: block;}
+
+
+	header .logo{
+ 	font-size:1.4rem;
+	margin-left:0.4rem;
+    color:black;
+	font-weight:bolder;}
+	header .seach {
+	display: flex;
+	flex-flow: wrap;
+	height:2.8rem;
+	margin-right:-1.5rem;
+	position: relative;
+	overflow: hidden;
+margin-top:.3rem;
+	border-radius:5rem;
+border:2px solid black;;
+	width:30%;
+	border-radius:0.5rem;}
 	
+	header .seach .search{
+	height:4rem;
+	position: relative;
+	border: none;
+		font-size:0.8rem;
+	outline: none;
+	width: 100%;
+	padding:1.4rem 0.7rem 3rem;}
 	
+	header .icons {
+		display: flex;
+		flex-wrap: wrap;
+	font-size: 2rem;
+		margin:3rem;
+		font-size:1.5rem;
+	margin-right:-2.4rem;
+	color: black;}
+
+	
+.home .slide-container .slide{
+		display: flex;
+		flex-flow: column;
+		margin-top:12rem;
+		margin-left:-9rem;}
+	.home .slide-container .imge{
+		display: flex;
+		justify-content: center;}
+	
+	.home .slide-container .slide  .content  h3{
+		font-size:3rem;
+	}
+	.home .slide-container .slide  .content  p{
+		font-size:1rem;}
+	.home .slide-container .slide  .content .btn{
+		margin-left:1.8rem;
+		font-size:1.4rem;}
+	
+	.home .slide-container .slide .imge{
+	flex: 1 1 50rem;
+	margin-right: -2rem;
+	margin-top:16rem;
+	position: relative;
+	z-index: 0;}
+.home .slide-container .slide .imge .nike{
+	animation: shoe .3s linear;
+	width:45%;
+	margin-top:-19rem;
+	margin-left:3.1rem;
+	height:50%;
+	transform: rotate(-3deg);}
+.home #prev{
+		margin-top:-6.8rem;
+	left:0.9rem;
 }
 
+.home #next{
+	margin-top:-6.8rem;
+	right:1.5rem;}
+	.product{
+		margin-top:-28rem;}
+
+	.home .slide-container .slide{
+		display: flex;
+		flex-flow: column;
+		margin-top:16rem;
+		margin-left:-3.5rem;}
+	.home .slide-container .imge{
+		display: flex;
+		justify-content: center;}
+	
+	
+	
+	.featured .row .content{
+		width: 100%;
+		flex-wrap: wrap;
+		cursor: pointer;
+	display:flex;
+	flex-flow: column;
+	margin-left:19rem;
+	margin-top:-29rem;
+	flex: 1 1 40rem;}
+	.featured .row .content h3{
+	font-size: 1.3rem;
+	color: #000;}
+
+.featured .row .content .stars{
+	font-size: 1.3rem;
+	margin-top:-3.3rem;
+	color:orange;
+	padding: 5rem 0;}
+
+.featured .row .content p{
+		margin-top:-4.2rem;
+	font-size:0.9rem;
+	color: #666;
+	padding: 1rem 0;}
+
+		.featured .row .content .btn{
+		display: flex;
+		width:70%;
+		height:3.1rem;
+		margin: 1.8rem;
+			margin-left:-0.5rem;
+	margin-top: 1rem;
+	border-radius: .5rem;
+	border:.2rem solid #000;
+	font-size:0.9rem;
+	font-weight:bolder;
+	background: white;
+	cursor: pointer;
+		padding: .8rem 1rem;}
+
+	.featured .row .content .btn:hover{
+		color: white;
+		background: orange;
+	}
+}
 /*============
 
 
